@@ -26,36 +26,131 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        pnlmain = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        Lpassword = new javax.swing.JLabel();
+        txtusername = new javax.swing.JTextField();
+        Lusername1 = new javax.swing.JLabel();
+        jPasswordField1 = new javax.swing.JPasswordField();
+        jToggleButton1 = new javax.swing.JToggleButton();
+        jLabel3 = new javax.swing.JLabel();
+        BttnRecruit = new javax.swing.JLabel();
+        showpass2 = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        pnlmain.setBackground(new java.awt.Color(255, 206, 109));
+        pnlmain.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1000, Short.MAX_VALUE)
+        jPanel2.setBackground(new java.awt.Color(0, 174, 239));
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 430, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 600, Short.MAX_VALUE)
         );
+
+        pnlmain.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        jLabel2.setFont(new java.awt.Font("Swis721 BlkEx BT", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel2.setText(" Log in to Your Account ");
+        pnlmain.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(472, 51, 420, -1));
+
+        jLabel5.setFont(new java.awt.Font("Swis721 BlkEx BT", 0, 12)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel5.setText("Welcome! Please enter your details");
+        pnlmain.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(529, 87, 310, 16));
+
+        Lpassword.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        Lpassword.setForeground(new java.awt.Color(51, 51, 51));
+        Lpassword.setText("Password");
+        pnlmain.add(Lpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(488, 234, 90, -1));
+
+        txtusername.setBackground(new java.awt.Color(153, 153, 153));
+        pnlmain.add(txtusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(488, 173, 370, 55));
+
+        Lusername1.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        Lusername1.setForeground(new java.awt.Color(51, 51, 51));
+        Lusername1.setText("Username");
+        pnlmain.add(Lusername1, new org.netbeans.lib.awtextra.AbsoluteConstraints(488, 148, 90, -1));
+
+        jPasswordField1.setBackground(new java.awt.Color(153, 153, 153));
+        pnlmain.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(488, 259, 370, 53));
+
+        jToggleButton1.setBackground(new java.awt.Color(51, 51, 51));
+        jToggleButton1.setFont(new java.awt.Font("Swis721 Blk BT", 1, 18)); // NOI18N
+        jToggleButton1.setText("Login");
+        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton1ActionPerformed(evt);
+            }
+        });
+        pnlmain.add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(488, 367, 370, 48));
+
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setText("Dont have an account?");
+        pnlmain.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 480, -1, -1));
+
+        BttnRecruit.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        BttnRecruit.setForeground(new java.awt.Color(51, 51, 51));
+        BttnRecruit.setText("Register Now!");
+        BttnRecruit.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BttnRecruitMouseClicked(evt);
+            }
+        });
+        pnlmain.add(BttnRecruit, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 480, 110, -1));
+
+        showpass2.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
+        showpass2.setForeground(new java.awt.Color(51, 51, 51));
+        showpass2.setText("Show Password");
+        showpass2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                showpass2ActionPerformed(evt);
+            }
+        });
+        pnlmain.add(showpass2, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 320, 120, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnlmain, javax.swing.GroupLayout.DEFAULT_SIZE, 900, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnlmain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jToggleButton1ActionPerformed
+
+    private void BttnRecruitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BttnRecruitMouseClicked
+//        Register reg = new Register();
+//        reg.setVisible(true);
+//        dispose();
+    }//GEN-LAST:event_BttnRecruitMouseClicked
+
+    private void showpass2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showpass2ActionPerformed
+        if(showpass.isSelected()){
+            jpassword.setEchoChar((char)0); //I reveal ang password
+        }else {
+            jpassword.setEchoChar('*');//Taguan ang password
+        }
+    }//GEN-LAST:event_showpass2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -93,6 +188,20 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel BttnRecruit;
+    private javax.swing.JLabel Lpassword;
+    private javax.swing.JLabel Lusername1;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JToggleButton jToggleButton1;
+    private javax.swing.JPanel pnlmain;
+    private javax.swing.JCheckBox showpass;
+    private javax.swing.JCheckBox showpass1;
+    private javax.swing.JCheckBox showpass2;
+    private javax.swing.JTextField txtusername;
     // End of variables declaration//GEN-END:variables
 }
