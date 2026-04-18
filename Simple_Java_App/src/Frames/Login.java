@@ -42,10 +42,11 @@ public class Login extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        pnlmain.setBackground(new java.awt.Color(255, 206, 109));
+        pnlmain.setBackground(new java.awt.Color(229, 102, 78));
+        pnlmain.setForeground(new java.awt.Color(41, 114, 182));
         pnlmain.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(0, 174, 239));
+        jPanel2.setBackground(new java.awt.Color(78, 188, 255));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -63,28 +64,28 @@ public class Login extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Swis721 BlkEx BT", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(51, 51, 51));
         jLabel2.setText(" Log in to Your Account ");
-        pnlmain.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(472, 51, 420, -1));
+        pnlmain.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 50, 420, -1));
 
         jLabel5.setFont(new java.awt.Font("Swis721 BlkEx BT", 0, 12)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(51, 51, 51));
         jLabel5.setText("Welcome! Please enter your details");
-        pnlmain.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(529, 87, 310, 16));
+        pnlmain.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 80, 310, 16));
 
         Lpassword.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         Lpassword.setForeground(new java.awt.Color(51, 51, 51));
         Lpassword.setText("Password");
-        pnlmain.add(Lpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(488, 234, 90, -1));
+        pnlmain.add(Lpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 260, 90, -1));
 
         txtusername.setBackground(new java.awt.Color(153, 153, 153));
-        pnlmain.add(txtusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(488, 173, 370, 55));
+        pnlmain.add(txtusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 200, 370, 55));
 
         Lusername1.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
         Lusername1.setForeground(new java.awt.Color(51, 51, 51));
         Lusername1.setText("Username");
-        pnlmain.add(Lusername1, new org.netbeans.lib.awtextra.AbsoluteConstraints(488, 148, 90, -1));
+        pnlmain.add(Lusername1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 180, 90, -1));
 
         jPasswordField1.setBackground(new java.awt.Color(153, 153, 153));
-        pnlmain.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(488, 259, 370, 53));
+        pnlmain.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 290, 370, 53));
 
         jToggleButton1.setBackground(new java.awt.Color(51, 51, 51));
         jToggleButton1.setFont(new java.awt.Font("Swis721 Blk BT", 1, 18)); // NOI18N
@@ -94,11 +95,11 @@ public class Login extends javax.swing.JFrame {
                 jToggleButton1ActionPerformed(evt);
             }
         });
-        pnlmain.add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(488, 367, 370, 48));
+        pnlmain.add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 400, 370, 48));
 
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Dont have an account?");
-        pnlmain.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 480, -1, -1));
+        pnlmain.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 490, -1, -1));
 
         BttnRecruit.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         BttnRecruit.setForeground(new java.awt.Color(51, 51, 51));
@@ -108,7 +109,7 @@ public class Login extends javax.swing.JFrame {
                 BttnRecruitMouseClicked(evt);
             }
         });
-        pnlmain.add(BttnRecruit, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 480, 110, -1));
+        pnlmain.add(BttnRecruit, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 490, 110, -1));
 
         showpass2.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
         showpass2.setForeground(new java.awt.Color(51, 51, 51));
@@ -118,7 +119,7 @@ public class Login extends javax.swing.JFrame {
                 showpass2ActionPerformed(evt);
             }
         });
-        pnlmain.add(showpass2, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 320, 120, -1));
+        pnlmain.add(showpass2, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 350, 120, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
