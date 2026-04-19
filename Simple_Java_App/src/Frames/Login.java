@@ -1,5 +1,7 @@
 package Frames;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author ADMIN
@@ -11,7 +13,7 @@ public class Login extends javax.swing.JFrame {
      */
     public Login() {
         initComponents();
-        setLocationRelativeTo(null); // para mag pop up ni nga jframe sa tunga kung I run
+        setLocationRelativeTo(null); // tunga mo tunga
         
     }
 
@@ -157,10 +159,18 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-        Dashboard dash = new Dashboard();
-        dash.setVisible(true);
-        dispose();
+        String user = txtusername.getText().trim();
+        String pass = new String(jpassword.getPassword()).trim();
         
+         if (user.isEmpty() || pass.isEmpty()) {
+            JOptionPane.showMessageDialog(this,
+                    "Please enter your username and password!.",
+                    "Login Failed", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        
+        
+
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void BttnRegisterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BttnRegisterMouseClicked
@@ -171,7 +181,7 @@ public class Login extends javax.swing.JFrame {
 
     private void showpassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showpassActionPerformed
         if(showpass.isSelected()){
-            jpassword.setEchoChar((char)0); //I reveal ang password
+            jpassword.setEchoChar((char)0); //ipakita ang password
         }else {
             jpassword.setEchoChar('*');//Taguan ang password
         }
