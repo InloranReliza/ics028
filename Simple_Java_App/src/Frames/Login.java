@@ -15,6 +15,8 @@ public class Login extends javax.swing.JFrame {
      */
     public Login() {
         initComponents();
+        setLocationRelativeTo(null); // para mag pop up ni nga jframe sa tunga kung I run
+        
     }
 
     /**
@@ -43,16 +45,16 @@ public class Login extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        pnlmain.setBackground(new java.awt.Color(255, 255, 195));
+        pnlmain.setBackground(new java.awt.Color(245, 230, 190));
         pnlmain.setForeground(new java.awt.Color(41, 114, 182));
         pnlmain.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(41, 114, 182));
+        jPanel2.setBackground(new java.awt.Color(0, 174, 239));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/stitch-triste.gif"))); // NOI18N
 
         jLabel2.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 36)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 195));
+        jLabel2.setForeground(new java.awt.Color(0, 91, 150));
         jLabel2.setText("Welcome Home!");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -60,26 +62,29 @@ public class Login extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(42, 42, 42)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(105, 105, 105)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(100, 100, 100)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(177, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel2)
+                .addContainerGap(176, Short.MAX_VALUE))
         );
 
         pnlmain.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 390, -1));
 
         Lpassword.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        Lpassword.setForeground(new java.awt.Color(41, 114, 182));
+        Lpassword.setForeground(new java.awt.Color(0, 91, 150));
         Lpassword.setText("Password");
         pnlmain.add(Lpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 260, 90, -1));
 
@@ -87,14 +92,14 @@ public class Login extends javax.swing.JFrame {
         pnlmain.add(txtusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 190, 370, 55));
 
         Lusername1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        Lusername1.setForeground(new java.awt.Color(41, 114, 182));
+        Lusername1.setForeground(new java.awt.Color(0, 91, 150));
         Lusername1.setText("Username");
         pnlmain.add(Lusername1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 170, 90, -1));
 
         jPasswordField1.setBackground(new java.awt.Color(204, 204, 204));
         pnlmain.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 280, 370, 53));
 
-        jToggleButton1.setBackground(new java.awt.Color(0, 94, 184));
+        jToggleButton1.setBackground(new java.awt.Color(255, 140, 66));
         jToggleButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jToggleButton1.setForeground(new java.awt.Color(255, 255, 195));
         jToggleButton1.setText("Login");
@@ -105,13 +110,13 @@ public class Login extends javax.swing.JFrame {
         });
         pnlmain.add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 420, 370, 48));
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(41, 114, 182));
+        jLabel3.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 91, 150));
         jLabel3.setText("Dont have an account?");
-        pnlmain.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 510, -1, -1));
+        pnlmain.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 510, -1, -1));
 
         BttnRecruit.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 12)); // NOI18N
-        BttnRecruit.setForeground(new java.awt.Color(102, 102, 255));
+        BttnRecruit.setForeground(new java.awt.Color(255, 105, 180));
         BttnRecruit.setText("Register Now!");
         BttnRecruit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -121,7 +126,7 @@ public class Login extends javax.swing.JFrame {
         pnlmain.add(BttnRecruit, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 510, 110, -1));
 
         showpass2.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 12)); // NOI18N
-        showpass2.setForeground(new java.awt.Color(41, 114, 182));
+        showpass2.setForeground(new java.awt.Color(0, 91, 150));
         showpass2.setText("Show Password");
         showpass2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -130,16 +135,16 @@ public class Login extends javax.swing.JFrame {
         });
         pnlmain.add(showpass2, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 340, 130, 20));
 
-        jLabel4.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 28)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(41, 114, 182));
+        jLabel4.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 34)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 91, 150));
         jLabel4.setText(" Log in to Your Account ");
-        pnlmain.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 70, 340, -1));
+        pnlmain.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 50, 430, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlmain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnlmain, javax.swing.GroupLayout.PREFERRED_SIZE, 900, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
