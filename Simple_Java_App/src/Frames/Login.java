@@ -51,6 +51,7 @@ public class Login extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(0, 174, 239));
 
+        jLabel1.setBackground(new java.awt.Color(0, 174, 239));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/stitch-triste.gif"))); // NOI18N
 
         jLabel2.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 36)); // NOI18N
@@ -88,19 +89,28 @@ public class Login extends javax.swing.JFrame {
         Lpassword.setText("Password");
         pnlmain.add(Lpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 260, 90, -1));
 
-        txtusername.setBackground(new java.awt.Color(204, 204, 204));
-        pnlmain.add(txtusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 190, 370, 55));
+        txtusername.setBackground(new java.awt.Color(255, 251, 240));
+        txtusername.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
+        txtusername.setForeground(new java.awt.Color(0, 91, 150));
+        txtusername.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtusernameActionPerformed(evt);
+            }
+        });
+        pnlmain.add(txtusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 190, 370, 50));
 
         Lusername1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         Lusername1.setForeground(new java.awt.Color(0, 91, 150));
         Lusername1.setText("Username");
         pnlmain.add(Lusername1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 170, 90, -1));
 
-        jPasswordField1.setBackground(new java.awt.Color(204, 204, 204));
-        pnlmain.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 280, 370, 53));
+        jPasswordField1.setBackground(new java.awt.Color(255, 251, 240));
+        jPasswordField1.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
+        jPasswordField1.setForeground(new java.awt.Color(0, 91, 150));
+        pnlmain.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 280, 370, 50));
 
         jToggleButton1.setBackground(new java.awt.Color(255, 140, 66));
-        jToggleButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jToggleButton1.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 20)); // NOI18N
         jToggleButton1.setForeground(new java.awt.Color(255, 255, 195));
         jToggleButton1.setText("Login");
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -171,6 +181,10 @@ public class Login extends javax.swing.JFrame {
 //            jpassword.setEchoChar('*');//Taguan ang password
 //        }
     }//GEN-LAST:event_showpass2ActionPerformed
+
+    private void txtusernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtusernameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtusernameActionPerformed
 
     /**
      * @param args the command line arguments
