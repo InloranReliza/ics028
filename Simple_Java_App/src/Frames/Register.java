@@ -16,7 +16,7 @@ public class Register extends javax.swing.JFrame {
     public Register() {
         initComponents();
         setLocationRelativeTo(null); // para mag pop up ni nga jframe sa tunga kung I run
-        
+
     }
 
     /**
@@ -38,13 +38,13 @@ public class Register extends javax.swing.JFrame {
         Lusername1 = new javax.swing.JLabel();
         txtusername = new javax.swing.JTextField();
         Lpassword = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        showpass2 = new javax.swing.JCheckBox();
+        jpassword = new javax.swing.JPasswordField();
+        showpass = new javax.swing.JCheckBox();
         jToggleButton1 = new javax.swing.JToggleButton();
         jLabel3 = new javax.swing.JLabel();
         BttnRecruit = new javax.swing.JLabel();
         Lusername2 = new javax.swing.JLabel();
-        txtusername1 = new javax.swing.JTextField();
+        txtfullname = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -119,16 +119,16 @@ public class Register extends javax.swing.JFrame {
         Lpassword.setForeground(new java.awt.Color(0, 91, 150));
         Lpassword.setText("Password");
 
-        jPasswordField1.setBackground(new java.awt.Color(255, 251, 240));
-        jPasswordField1.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
-        jPasswordField1.setForeground(new java.awt.Color(0, 91, 150));
+        jpassword.setBackground(new java.awt.Color(255, 251, 240));
+        jpassword.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
+        jpassword.setForeground(new java.awt.Color(0, 91, 150));
 
-        showpass2.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 12)); // NOI18N
-        showpass2.setForeground(new java.awt.Color(0, 91, 150));
-        showpass2.setText("Show Password");
-        showpass2.addActionListener(new java.awt.event.ActionListener() {
+        showpass.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 12)); // NOI18N
+        showpass.setForeground(new java.awt.Color(0, 91, 150));
+        showpass.setText("Show Password");
+        showpass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                showpass2ActionPerformed(evt);
+                showpassActionPerformed(evt);
             }
         });
 
@@ -159,12 +159,12 @@ public class Register extends javax.swing.JFrame {
         Lusername2.setForeground(new java.awt.Color(0, 91, 150));
         Lusername2.setText("Full Name");
 
-        txtusername1.setBackground(new java.awt.Color(255, 251, 240));
-        txtusername1.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
-        txtusername1.setForeground(new java.awt.Color(0, 91, 150));
-        txtusername1.addActionListener(new java.awt.event.ActionListener() {
+        txtfullname.setBackground(new java.awt.Color(255, 251, 240));
+        txtfullname.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
+        txtfullname.setForeground(new java.awt.Color(0, 91, 150));
+        txtfullname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtusername1ActionPerformed(evt);
+                txtfullnameActionPerformed(evt);
             }
         });
 
@@ -172,31 +172,31 @@ public class Register extends javax.swing.JFrame {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(126, 126, 126)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(BttnRecruit, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap(71, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(Lusername2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtusername1, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtfullname, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Lusername1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtusername, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Lpassword, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jpassword, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jToggleButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(69, 69, 69))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                         .addComponent(jLabel4)
                         .addGap(115, 115, 115))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addComponent(showpass2, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(showpass, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(61, 61, 61))))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(131, 131, 131)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(BttnRecruit, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -206,7 +206,7 @@ public class Register extends javax.swing.JFrame {
                 .addGap(48, 48, 48)
                 .addComponent(Lusername2)
                 .addGap(0, 0, 0)
-                .addComponent(txtusername1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtfullname, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(Lusername1)
                 .addGap(0, 0, 0)
@@ -214,16 +214,16 @@ public class Register extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(Lpassword)
                 .addGap(0, 0, 0)
-                .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jpassword, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(showpass2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(showpass, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27)
                 .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(69, 69, 69)
+                .addGap(45, 45, 45)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BttnRecruit)
                     .addComponent(jLabel3))
-                .addGap(37, 37, 37))
+                .addGap(61, 61, 61))
         );
 
         jmain.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(389, 0, 510, 600));
@@ -246,27 +246,29 @@ public class Register extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtusernameActionPerformed
 
-    private void showpass2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showpass2ActionPerformed
-        //        if(showpass.isSelected()){
-            //            jpassword.setEchoChar((char)0); //I reveal ang password
-            //        }else {
-            //            jpassword.setEchoChar('*');//Taguan ang password
-            //        }
-    }//GEN-LAST:event_showpass2ActionPerformed
+    private void showpassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showpassActionPerformed
+        if (showpass.isSelected()) {
+            jpassword.setEchoChar((char) 0); //I reveal ang password
+        } else {
+            jpassword.setEchoChar('*');//Taguan ang password
+        }
+    }//GEN-LAST:event_showpassActionPerformed
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-        // TODO add your handling code here:
+        Login log = new Login();
+        log.setVisible(true);
+        dispose();
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void BttnRecruitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BttnRecruitMouseClicked
-        //        Register reg = new Register();
-        //        reg.setVisible(true);
-        //        dispose();
+        Login log = new Login();
+        log.setVisible(true);
+        dispose();
     }//GEN-LAST:event_BttnRecruitMouseClicked
 
-    private void txtusername1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtusername1ActionPerformed
+    private void txtfullnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtfullnameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtusername1ActionPerformed
+    }//GEN-LAST:event_txtfullnameActionPerformed
 
     /**
      * @param args the command line arguments
@@ -315,11 +317,11 @@ public class Register extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JPanel jmain;
-    private javax.swing.JCheckBox showpass2;
+    private javax.swing.JPasswordField jpassword;
+    private javax.swing.JCheckBox showpass;
+    private javax.swing.JTextField txtfullname;
     private javax.swing.JTextField txtusername;
-    private javax.swing.JTextField txtusername1;
     // End of variables declaration//GEN-END:variables
 }

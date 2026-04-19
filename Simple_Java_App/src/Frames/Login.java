@@ -36,11 +36,11 @@ public class Login extends javax.swing.JFrame {
         Lpassword = new javax.swing.JLabel();
         txtusername = new javax.swing.JTextField();
         Lusername1 = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        jpassword = new javax.swing.JPasswordField();
         jToggleButton1 = new javax.swing.JToggleButton();
         jLabel3 = new javax.swing.JLabel();
         BttnRecruit = new javax.swing.JLabel();
-        showpass2 = new javax.swing.JCheckBox();
+        showpass = new javax.swing.JCheckBox();
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -52,7 +52,7 @@ public class Login extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(0, 174, 239));
 
         jLabel1.setBackground(new java.awt.Color(0, 174, 239));
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/stitch-triste.gif"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/stitch_login_bg.gif"))); // NOI18N
 
         jLabel2.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(245, 230, 190));
@@ -104,10 +104,10 @@ public class Login extends javax.swing.JFrame {
         Lusername1.setText("Username");
         pnlmain.add(Lusername1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 170, 90, -1));
 
-        jPasswordField1.setBackground(new java.awt.Color(255, 251, 240));
-        jPasswordField1.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
-        jPasswordField1.setForeground(new java.awt.Color(0, 91, 150));
-        pnlmain.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 280, 370, 50));
+        jpassword.setBackground(new java.awt.Color(255, 251, 240));
+        jpassword.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
+        jpassword.setForeground(new java.awt.Color(0, 91, 150));
+        pnlmain.add(jpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 280, 370, 50));
 
         jToggleButton1.setBackground(new java.awt.Color(255, 140, 66));
         jToggleButton1.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 20)); // NOI18N
@@ -135,15 +135,15 @@ public class Login extends javax.swing.JFrame {
         });
         pnlmain.add(BttnRecruit, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 510, 110, -1));
 
-        showpass2.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 12)); // NOI18N
-        showpass2.setForeground(new java.awt.Color(0, 91, 150));
-        showpass2.setText("Show Password");
-        showpass2.addActionListener(new java.awt.event.ActionListener() {
+        showpass.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 12)); // NOI18N
+        showpass.setForeground(new java.awt.Color(0, 91, 150));
+        showpass.setText("Show Password");
+        showpass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                showpass2ActionPerformed(evt);
+                showpassActionPerformed(evt);
             }
         });
-        pnlmain.add(showpass2, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 340, 130, 20));
+        pnlmain.add(showpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 340, 130, 20));
 
         jLabel4.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 34)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 91, 150));
@@ -165,22 +165,23 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-        // TODO add your handling code here:
+       
+        
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void BttnRecruitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BttnRecruitMouseClicked
-//        Register reg = new Register();
-//        reg.setVisible(true);
-//        dispose();
+        Register reg = new Register();
+        reg.setVisible(true);
+        dispose();
     }//GEN-LAST:event_BttnRecruitMouseClicked
 
-    private void showpass2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showpass2ActionPerformed
-//        if(showpass.isSelected()){
-//            jpassword.setEchoChar((char)0); //I reveal ang password
-//        }else {
-//            jpassword.setEchoChar('*');//Taguan ang password
-//        }
-    }//GEN-LAST:event_showpass2ActionPerformed
+    private void showpassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showpassActionPerformed
+        if(showpass.isSelected()){
+            jpassword.setEchoChar((char)0); //I reveal ang password
+        }else {
+            jpassword.setEchoChar('*');//Taguan ang password
+        }
+    }//GEN-LAST:event_showpassActionPerformed
 
     private void txtusernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtusernameActionPerformed
         // TODO add your handling code here:
@@ -231,10 +232,10 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JToggleButton jToggleButton1;
+    private javax.swing.JPasswordField jpassword;
     private javax.swing.JPanel pnlmain;
-    private javax.swing.JCheckBox showpass2;
+    private javax.swing.JCheckBox showpass;
     private javax.swing.JTextField txtusername;
     // End of variables declaration//GEN-END:variables
 }
