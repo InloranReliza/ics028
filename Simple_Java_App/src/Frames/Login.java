@@ -143,7 +143,7 @@ public class Login extends javax.swing.JFrame {
                 showpass2ActionPerformed(evt);
             }
         });
-        pnlmain.add(showpass2, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 340, 130, 20));
+        pnlmain.add(showpass2, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 340, 130, 20));
 
         jLabel4.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 34)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 91, 150));
