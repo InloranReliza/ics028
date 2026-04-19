@@ -263,8 +263,8 @@ public class Register extends javax.swing.JFrame {
         }
         
         try{
-            String url = "jdbc:mysql://localhost:3306/lilo_stitch_db";
-            String user = "root"; // Deafault ang sa XAMPP Username
+            String url = "jdbc:mysql://localhost/lilo_stitch_db";
+            String user = "root"; // Deafault ang sda XAMPP Username
             String password = "";  // walay password sa XAMPP
             
             java.sql.Connection conn = java.sql.DriverManager.getConnection(url, user, password);

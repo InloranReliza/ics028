@@ -170,7 +170,7 @@ public class Login extends javax.swing.JFrame {
         }
 
         try {
-            String url = "jdbc:mysql://localhost:3306/lilo_stitch_db";
+            String url = "jdbc:mysql://localhost/lilo_stitch_db";
             java.sql.Connection conn = java.sql.DriverManager.getConnection(url, "root", "");
 
             String sql = "SELECT * FROM users Where username=? AND password=?";
