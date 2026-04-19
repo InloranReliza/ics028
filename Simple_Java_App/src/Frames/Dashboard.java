@@ -1,4 +1,11 @@
 package Frames;
+    
+import java.sql.Connection;
+import java.sql.Statement;
+import java.sql.ResultSet;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+import java.sql.PreparedStatement;
 
 /**
  *
@@ -12,9 +19,9 @@ public class Dashboard extends javax.swing.JFrame {
     public Dashboard() {
         initComponents();
         setLocationRelativeTo(null);
+        loadTableData();
     }
 
-  
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -36,7 +43,7 @@ public class Dashboard extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tblmain = new javax.swing.JTable();
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -188,9 +195,9 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel6.setForeground(new java.awt.Color(0, 91, 150));
         jLabel6.setText("Ohana User List ");
 
-        jTable1.setBackground(new java.awt.Color(255, 249, 227));
-        jTable1.setForeground(new java.awt.Color(51, 51, 51));
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tblmain.setBackground(new java.awt.Color(255, 249, 227));
+        tblmain.setForeground(new java.awt.Color(51, 51, 51));
+        tblmain.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -201,7 +208,12 @@ public class Dashboard extends javax.swing.JFrame {
                 "Full Name", "Username", "Password", "Date Created"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        tblmain.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tblmainMouseClicked(evt);
+            }
+        });
+        jScrollPane1.setViewportView(tblmain);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -254,7 +266,7 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_txtusername1ActionPerformed
 
     private void bttnupdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttnupdateActionPerformed
-      
+
     }//GEN-LAST:event_bttnupdateActionPerformed
 
     private void bttndeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttndeleteActionPerformed
@@ -262,10 +274,51 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_bttndeleteActionPerformed
 
     private void bttndelete1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttndelete1ActionPerformed
-       Login log = new Login();
-       log.setVisible(true);
-       dispose();
+        Login log = new Login();
+        log.setVisible(true);
+        dispose();
     }//GEN-LAST:event_bttndelete1ActionPerformed
+
+    private void tblmainMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblmainMouseClicked
+        int row = tblmain.getSelectedRow();
+        DefaultTableModel model = (DefaultTableModel) tblmain.getModel();
+
+        // Populate the text fields with data from the selected row
+        txtusername1.setText(model.getValueAt(row, 0).toString()); // Full Name
+        txtusername.setText(model.getValueAt(row, 1).toString());  // Username
+        jpassword.setText(model.getValueAt(row, 2).toString());   // Password
+
+        //Disable the Username field during update to prevent changing the Primary Key
+        txtusername.setEditable(false);
+    }//GEN-LAST:event_tblmainMouseClicked
+
+    public void loadTableData() {
+        // Note: Changed 'userTable' to 'jTable1' to match your variable declaration
+    DefaultTableModel model = (DefaultTableModel) tblmain.getModel();
+    model.setRowCount(0); // Clear existing data
+
+    String url = "jdbc:mysql://localhost:3306/lilo_stitch_db";
+    String user = "root";
+    String password = "";
+    
+    // Using the exact column names from your database
+    String query = "SELECT fullname, username, password FROM users"; 
+    
+    try (java.sql.Connection conn = java.sql.DriverManager.getConnection(url, user, password);
+         java.sql.Statement stmt = conn.createStatement();
+         java.sql.ResultSet rs = stmt.executeQuery(query)) {
+
+        while (rs.next()) {
+            model.addRow(new Object[]{
+                rs.getString("fullname"),
+                rs.getString("username"),
+                rs.getString("password")
+            });
+        }
+    } catch (java.sql.SQLException e) {
+        JOptionPane.showMessageDialog(this, "Failed to load data: " + e.getMessage());
+    }
+    }
 
     /**
      * @param args the command line arguments
@@ -317,8 +370,8 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JPasswordField jpassword;
+    private javax.swing.JTable tblmain;
     private javax.swing.JTextField txtusername;
     private javax.swing.JTextField txtusername1;
     // End of variables declaration//GEN-END:variables

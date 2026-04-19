@@ -1,5 +1,7 @@
 package Frames;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author ADMIN
@@ -247,9 +249,53 @@ public class Register extends javax.swing.JFrame {
     }//GEN-LAST:event_showpassActionPerformed
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-        Login log = new Login();
-        log.setVisible(true);
-        dispose();
+        String fullname, newuser,newpass;
+        
+        fullname = txtfullname.getText();
+        newuser = txtusername.getText();
+        newpass = new String(jpassword.getPassword()).trim();
+        
+        if (fullname.isEmpty()|| newuser.isEmpty() || newpass.isEmpty()) {
+            JOptionPane.showMessageDialog(this,
+                    "The family member requires a name and a password!.",
+                    "Entry Denied", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        
+        try{
+            String url = "jdbc:mysql://localhost:3306/lilo_stitch_db";
+            String user = "root"; // Deafault ang sa XAMPP Username
+            String password = "";  // walay password sa XAMPP
+            
+            java.sql.Connection conn = java.sql.DriverManager.getConnection(url, user, password);
+            
+            String sql = "INSERT INTO users (fullname, username, password) VALUES (?, ?, ?)";
+            java.sql.PreparedStatement pst = conn.prepareStatement(sql);
+            
+            pst.setString(1, fullname);
+            pst.setString(2, newuser);
+            pst.setString(3, newpass);
+            
+            pst.executeUpdate();
+            
+            //mo pop-up after ma create ang account
+            JOptionPane.showMessageDialog(this, "Welcome to the Family, " + newuser);
+            Login log = new Login();
+            log.setVisible(true);
+            dispose();
+            
+            conn.close();
+            
+        }catch(java.sql.SQLException e){
+            if (e.getErrorCode() == 1062) {
+                JOptionPane.showMessageDialog(this, "This name is already taken!", "Error" , JOptionPane.ERROR_MESSAGE);
+            
+            }else{
+                JOptionPane.showMessageDialog(this, "Database Error: " + e.getMessage());
+            }
+        }catch(Exception e) {
+                JOptionPane.showMessageDialog(this, "System Error: " + e.getMessage());
+        }
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void BttnRecruitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BttnRecruitMouseClicked
