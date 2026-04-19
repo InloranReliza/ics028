@@ -7,10 +7,6 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import java.sql.PreparedStatement;
 
-/**
- *
- * @author ADMIN
- */
 public class Dashboard extends javax.swing.JFrame {
 
     /**
@@ -33,13 +29,13 @@ public class Dashboard extends javax.swing.JFrame {
         Lusername1 = new javax.swing.JLabel();
         txtusername = new javax.swing.JTextField();
         Lpassword = new javax.swing.JLabel();
-        jpassword = new javax.swing.JPasswordField();
-        txtusername1 = new javax.swing.JTextField();
+        txtfullname = new javax.swing.JTextField();
         bttnupdate = new javax.swing.JToggleButton();
         bttndelete = new javax.swing.JToggleButton();
         bttndelete1 = new javax.swing.JToggleButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        txtpassword = new javax.swing.JTextField();
         jPanel4 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -77,16 +73,12 @@ public class Dashboard extends javax.swing.JFrame {
         Lpassword.setForeground(new java.awt.Color(255, 255, 255));
         Lpassword.setText("Password");
 
-        jpassword.setBackground(new java.awt.Color(255, 251, 240));
-        jpassword.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
-        jpassword.setForeground(new java.awt.Color(0, 91, 150));
-
-        txtusername1.setBackground(new java.awt.Color(255, 251, 240));
-        txtusername1.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
-        txtusername1.setForeground(new java.awt.Color(0, 91, 150));
-        txtusername1.addActionListener(new java.awt.event.ActionListener() {
+        txtfullname.setBackground(new java.awt.Color(255, 251, 240));
+        txtfullname.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
+        txtfullname.setForeground(new java.awt.Color(0, 91, 150));
+        txtfullname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtusername1ActionPerformed(evt);
+                txtfullnameActionPerformed(evt);
             }
         });
 
@@ -128,6 +120,15 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Ohana ");
 
+        txtpassword.setBackground(new java.awt.Color(255, 251, 240));
+        txtpassword.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 14)); // NOI18N
+        txtpassword.setForeground(new java.awt.Color(0, 91, 150));
+        txtpassword.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtpasswordActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -141,9 +142,9 @@ public class Dashboard extends javax.swing.JFrame {
                             .addComponent(Lusername1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Lpassword, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtusername)
-                            .addComponent(jpassword)
-                            .addComponent(txtusername1)
-                            .addComponent(bttndelete1, javax.swing.GroupLayout.DEFAULT_SIZE, 280, Short.MAX_VALUE))
+                            .addComponent(txtfullname)
+                            .addComponent(bttndelete1, javax.swing.GroupLayout.DEFAULT_SIZE, 280, Short.MAX_VALUE)
+                            .addComponent(txtpassword))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(bttnupdate, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
@@ -169,7 +170,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addGap(61, 61, 61)
                 .addComponent(Lusername2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtusername1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtfullname, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(Lusername1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -177,7 +178,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(Lpassword)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jpassword, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtpassword, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bttnupdate, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -261,12 +262,42 @@ public class Dashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtusernameActionPerformed
 
-    private void txtusername1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtusername1ActionPerformed
+    private void txtfullnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtfullnameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtusername1ActionPerformed
+    }//GEN-LAST:event_txtfullnameActionPerformed
 
     private void bttnupdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttnupdateActionPerformed
+        String fullname, user, pass;
+        
+        fullname = txtfullname.getText();
+        user = txtusername.getText();
+        pass = txtpassword.getText();
+        
+        
+        try {
+            String url = "jdbc:mysql://localhost/lilo_stitch_db";
+            java.sql.Connection conn = java.sql.DriverManager.getConnection(url, "root", "");
 
+            
+            String sql = "UPDATE users SET fullname=?, password=? WHERE username=?";
+            PreparedStatement pst = conn.prepareStatement(sql);
+            
+            pst.setString(1, fullname);
+            pst.setString(2, user);
+            pst.setString(3, pass);
+            
+            int updated = pst.executeUpdate();
+            if (updated > 0) {
+                JOptionPane.showMessageDialog(this, "Slayer Record Updated!");
+                loadTableData(); // I refresh ang table 
+                txtusername.setEditable(true); // para magamit sa sunod
+            }
+                conn.close();
+            
+        }catch (Exception e) {
+             JOptionPane.showMessageDialog(this, "Update Error", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+        
     }//GEN-LAST:event_bttnupdateActionPerformed
 
     private void bttndeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttndeleteActionPerformed
@@ -284,25 +315,29 @@ public class Dashboard extends javax.swing.JFrame {
         DefaultTableModel model = (DefaultTableModel) tblmain.getModel();
 
         // Populate the text fields with data from the selected row
-        txtusername1.setText(model.getValueAt(row, 0).toString()); // Full Name
+        txtfullname.setText(model.getValueAt(row, 0).toString()); // Full Name
         txtusername.setText(model.getValueAt(row, 1).toString());  // Username
-        jpassword.setText(model.getValueAt(row, 2).toString());   // Password
+        txtpassword.setText(model.getValueAt(row, 2).toString());   // Password
 
         //Disable the Username field during update to prevent changing the Primary Key
         txtusername.setEditable(false);
     }//GEN-LAST:event_tblmainMouseClicked
+
+    private void txtpasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtpasswordActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtpasswordActionPerformed
 
     public void loadTableData() {
         // Note: Changed 'userTable' to 'jTable1' to match your variable declaration
     DefaultTableModel model = (DefaultTableModel) tblmain.getModel();
     model.setRowCount(0); // Clear existing data
 
-    String url = "jdbc:mysql://localhost:3306/lilo_stitch_db";
+    String url = "jdbc:mysql://localhost/lilo_stitch_db";
     String user = "root";
     String password = "";
     
     // Using the exact column names from your database
-    String query = "SELECT fullname, username, password FROM users"; 
+    String query = "SELECT fullname, username, password, date FROM users"; 
     
     try (java.sql.Connection conn = java.sql.DriverManager.getConnection(url, user, password);
          java.sql.Statement stmt = conn.createStatement();
@@ -312,7 +347,8 @@ public class Dashboard extends javax.swing.JFrame {
             model.addRow(new Object[]{
                 rs.getString("fullname"),
                 rs.getString("username"),
-                rs.getString("password")
+                rs.getString("password"),
+                rs.getString("date")
             });
         }
     } catch (java.sql.SQLException e) {
@@ -370,9 +406,9 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JPasswordField jpassword;
     private javax.swing.JTable tblmain;
+    private javax.swing.JTextField txtfullname;
+    private javax.swing.JTextField txtpassword;
     private javax.swing.JTextField txtusername;
-    private javax.swing.JTextField txtusername1;
     // End of variables declaration//GEN-END:variables
 }
