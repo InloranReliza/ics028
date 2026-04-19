@@ -29,8 +29,8 @@ public class Login extends javax.swing.JFrame {
         buttonGroup1 = new javax.swing.ButtonGroup();
         pnlmain = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
         Lpassword = new javax.swing.JLabel();
         txtusername = new javax.swing.JTextField();
         Lusername1 = new javax.swing.JLabel();
@@ -39,93 +39,107 @@ public class Login extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         BttnRecruit = new javax.swing.JLabel();
         showpass2 = new javax.swing.JCheckBox();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        pnlmain.setBackground(new java.awt.Color(229, 102, 78));
+        pnlmain.setBackground(new java.awt.Color(255, 255, 195));
         pnlmain.setForeground(new java.awt.Color(41, 114, 182));
         pnlmain.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(78, 188, 255));
+        jPanel2.setBackground(new java.awt.Color(41, 114, 182));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/stitch-triste.gif"))); // NOI18N
+
+        jLabel2.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 195));
+        jLabel2.setText("Welcome Home!");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 430, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(56, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(105, 105, 105)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(177, Short.MAX_VALUE))
         );
 
-        pnlmain.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        pnlmain.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 390, -1));
 
-        jLabel2.setFont(new java.awt.Font("Swis721 BlkEx BT", 1, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel2.setText(" Log in to Your Account ");
-        pnlmain.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 50, 420, -1));
-
-        jLabel5.setFont(new java.awt.Font("Swis721 BlkEx BT", 0, 12)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel5.setText("Welcome! Please enter your details");
-        pnlmain.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 80, 310, 16));
-
-        Lpassword.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        Lpassword.setForeground(new java.awt.Color(51, 51, 51));
+        Lpassword.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Lpassword.setForeground(new java.awt.Color(41, 114, 182));
         Lpassword.setText("Password");
-        pnlmain.add(Lpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 260, 90, -1));
+        pnlmain.add(Lpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 260, 90, -1));
 
-        txtusername.setBackground(new java.awt.Color(153, 153, 153));
-        pnlmain.add(txtusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 200, 370, 55));
+        txtusername.setBackground(new java.awt.Color(204, 204, 204));
+        pnlmain.add(txtusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 190, 370, 55));
 
-        Lusername1.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
-        Lusername1.setForeground(new java.awt.Color(51, 51, 51));
+        Lusername1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Lusername1.setForeground(new java.awt.Color(41, 114, 182));
         Lusername1.setText("Username");
-        pnlmain.add(Lusername1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 180, 90, -1));
+        pnlmain.add(Lusername1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 170, 90, -1));
 
-        jPasswordField1.setBackground(new java.awt.Color(153, 153, 153));
-        pnlmain.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 290, 370, 53));
+        jPasswordField1.setBackground(new java.awt.Color(204, 204, 204));
+        pnlmain.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 280, 370, 53));
 
-        jToggleButton1.setBackground(new java.awt.Color(51, 51, 51));
-        jToggleButton1.setFont(new java.awt.Font("Swis721 Blk BT", 1, 18)); // NOI18N
+        jToggleButton1.setBackground(new java.awt.Color(0, 94, 184));
+        jToggleButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jToggleButton1.setForeground(new java.awt.Color(255, 255, 195));
         jToggleButton1.setText("Login");
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jToggleButton1ActionPerformed(evt);
             }
         });
-        pnlmain.add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 400, 370, 48));
+        pnlmain.add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 420, 370, 48));
 
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(41, 114, 182));
         jLabel3.setText("Dont have an account?");
-        pnlmain.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 490, -1, -1));
+        pnlmain.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 510, -1, -1));
 
-        BttnRecruit.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        BttnRecruit.setForeground(new java.awt.Color(51, 51, 51));
+        BttnRecruit.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 12)); // NOI18N
+        BttnRecruit.setForeground(new java.awt.Color(102, 102, 255));
         BttnRecruit.setText("Register Now!");
         BttnRecruit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 BttnRecruitMouseClicked(evt);
             }
         });
-        pnlmain.add(BttnRecruit, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 490, 110, -1));
+        pnlmain.add(BttnRecruit, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 510, 110, -1));
 
-        showpass2.setFont(new java.awt.Font("Rockwell", 1, 12)); // NOI18N
-        showpass2.setForeground(new java.awt.Color(51, 51, 51));
+        showpass2.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 12)); // NOI18N
+        showpass2.setForeground(new java.awt.Color(41, 114, 182));
         showpass2.setText("Show Password");
         showpass2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 showpass2ActionPerformed(evt);
             }
         });
-        pnlmain.add(showpass2, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 350, 120, -1));
+        pnlmain.add(showpass2, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 340, 130, 20));
+
+        jLabel4.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 28)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(41, 114, 182));
+        jLabel4.setText(" Log in to Your Account ");
+        pnlmain.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 70, 340, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlmain, javax.swing.GroupLayout.DEFAULT_SIZE, 900, Short.MAX_VALUE)
+            .addComponent(pnlmain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -146,11 +160,11 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_BttnRecruitMouseClicked
 
     private void showpass2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showpass2ActionPerformed
-        if(showpass.isSelected()){
-            jpassword.setEchoChar((char)0); //I reveal ang password
-        }else {
-            jpassword.setEchoChar('*');//Taguan ang password
-        }
+//        if(showpass.isSelected()){
+//            jpassword.setEchoChar((char)0); //I reveal ang password
+//        }else {
+//            jpassword.setEchoChar('*');//Taguan ang password
+//        }
     }//GEN-LAST:event_showpass2ActionPerformed
 
     /**
@@ -193,15 +207,14 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel Lpassword;
     private javax.swing.JLabel Lusername1;
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JPanel pnlmain;
-    private javax.swing.JCheckBox showpass;
-    private javax.swing.JCheckBox showpass1;
     private javax.swing.JCheckBox showpass2;
     private javax.swing.JTextField txtusername;
     // End of variables declaration//GEN-END:variables
