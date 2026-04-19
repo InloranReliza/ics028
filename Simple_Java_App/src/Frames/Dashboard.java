@@ -11,6 +11,7 @@ public class Dashboard extends javax.swing.JFrame {
      */
     public Dashboard() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
   
@@ -24,7 +25,7 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tblmain = new javax.swing.JTable();
         imagebg = new javax.swing.JLabel();
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -66,7 +67,10 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel6.setText("OHANA MEMBER LIST");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 40, 420, 60));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tblmain.setBackground(new java.awt.Color(245, 230, 190));
+        tblmain.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        tblmain.setForeground(new java.awt.Color(0, 91, 150));
+        tblmain.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -74,10 +78,10 @@ public class Dashboard extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Full Name", "Username", "Password", "Date Created"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tblmain);
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 140, 540, 440));
 
@@ -143,6 +147,6 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable tblmain;
     // End of variables declaration//GEN-END:variables
 }
